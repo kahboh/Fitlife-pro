@@ -1,5 +1,6 @@
-import "../Home.css";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import "./Home.css";
 
 function Home() {
   return (
@@ -14,12 +15,19 @@ function Home() {
         </h2>
 
         <p className="description">
-          Track your workouts, meals, water intake, and fitness goals all in one place.
+          Track your workouts, meals, water intake, weight, and fitness goals
+          all in one place.
         </p>
 
-        <button>Login</button>
+        <div className="buttons">
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
 
-        <button>Register</button>
+          <Link to="/register">
+            <button>Register</button>
+          </Link>
+        </div>
       </div>
     </>
   );
